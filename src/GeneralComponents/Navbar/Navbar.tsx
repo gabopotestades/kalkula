@@ -24,7 +24,8 @@ function Navbar () {
         const cachedTheme = localStorage.getItem('kalkula-theme');
 
         if (cachedTheme && cachedTheme === THEME_LIGHT_CAPTION) {
-            changeTheme();
+            changeTheme(false);
+            
         } 
 
     }, [])
@@ -41,9 +42,12 @@ function Navbar () {
 
     }, [currentTheme])
 
-    function changeTheme() {
+    function changeTheme(isClicked:boolean) {
         setTheme(currentTheme === THEME_DARK_CAPTION ? THEME_LIGHT_CAPTION : THEME_DARK_CAPTION);
-        setThemeText(currentTheme === THEME_DARK_CAPTION ? THEME_LIGHT_CAPTION : THEME_DARK_CAPTION);  
+
+        if (isClicked) // Change label only if clicked in UI 
+            setThemeText(currentTheme === THEME_DARK_CAPTION ? THEME_LIGHT_CAPTION : THEME_DARK_CAPTION);  
+        
     }
 
     return (
@@ -116,7 +120,7 @@ function Navbar () {
                         <ThemeProvider theme={themeSettings}>
                             <FormControlLabel className="nav-frm-control-label" label={themeText} 
                               control={<Switch  className="nav-switch" color="default" 
-                                        checked={currentTheme === THEME_LIGHT_CAPTION} onChange={() => {changeTheme()}}/>}/>
+                                        checked={currentTheme === THEME_LIGHT_CAPTION} onChange={() => {changeTheme(true)}}/>}/>
                         </ThemeProvider>
                     </div>
                 </li>
