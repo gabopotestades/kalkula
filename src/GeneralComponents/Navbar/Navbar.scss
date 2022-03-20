@@ -1,10 +1,11 @@
 .navbar {
   position: fixed;
-  background-color: var(--dark-bg-secondary);
+  background-color: var(--bg-secondary);
   transition: width 600ms ease;
   width: 4rem;
   height: 100vh;
-  transition: width 200ms ease;
+  transition: width 200ms ease, background 250ms ease-in-out,
+    color 500ms ease-in-out;
 }
 
 .navbar:hover {
@@ -43,18 +44,29 @@
 .link-text {
   white-space: nowrap;
   display: none;
-  margin-left: 1rem;
+  margin-left: 0.75rem;
   font-size: 0.8rem;
-  color: var(--dark-icon-primary);
+  color: var(--icon-primary);
 }
 
 .nav-link svg {
   min-width: 2rem;
   margin: 0 1rem;
-  color: var(--dark-icon-primary);
+  color: var(--icon-primary);
 }
 
 .nav-link:hover svg,
 .nav-link:hover span {
-  color: var(--dark-text-primary);
+  color: var(--text-primary);
+}
+
+.nav-switch {
+  min-width: 2rem;
+  margin: 0 1.25rem;
+  color: var(--icon-primary);
+}
+
+.nav-frm-control-label {
+  color: var(--text-secondary);
+  display: none;
 }

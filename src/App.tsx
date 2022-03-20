@@ -6,18 +6,18 @@ import Home from './GeneralComponents/Home/Home';
 import FiniteStateMachines from './FiniteStateMachines/FiniteStateMachines';
 
 function App() {
+
   return (
 
     <Router>
 
       <div className="App">
-
-        <Navbar/>
-
-        <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/finite-state-machines' element={<FiniteStateMachines/>} />
-        </Routes>
+            
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/finite-state-machines' element={<FiniteStateMachines/>} />
+          </Routes>
 
       </div>
 

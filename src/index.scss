@@ -3,6 +3,37 @@
 * {
   margin: 0;
   padding: 0;
+  --text-dark-primary: #ffd369;
+  --text-dark-secondary: #8f8d89;
+  --bg-dark-primary: #18191a;
+  --bg-dark-secondary: #242526;
+  --bg-dark-trinary: #3a3b3c;
+  --icon-dark-primary: #a9afaf;
+
+  --text-light-primary: #927739;
+  --text-light-secondary: #686560;
+  --bg-light-primary: #ffffff;
+  --bg-light-secondary: #bdbdbd;
+  --bg-light-trinary: #868686;
+  --icon-light-primary: #646464;
+}
+
+.light-theme {
+  --text-primary: var(--text-light-primary);
+  --text-secondary: var(--text-light-secondary);
+  --bg-primary: var(--bg-light-primary);
+  --bg-secondary: var(--bg-light-secondary);
+  --bg-trinary: var(--bg-light-trinary);
+  --icon-primary: var(--icon-light-primary);
+}
+
+.dark-theme {
+  --text-primary: var(--text-dark-primary);
+  --text-secondary: var(--text-dark-secondary);
+  --bg-primary: var(--bg-dark-primary);
+  --bg-secondary: var(--bg-dark-secondary);
+  --bg-trinary: var(--bg-dark-trinary);
+  --icon-primary: var(--icon-dark-primary);
 }
 
 :root {
@@ -10,14 +41,9 @@
   padding: 0;
   font-size: 20px;
   font-family: "Inconsolata", monospace;
-  --dark-text-primary: #ffd369;
-  --dark-text-secondary: #8f8d89;
-  --dark-bg-primary: #18191a;
-  --dark-bg-secondary: #242526;
-  --dark-bg-trinary: #3a3b3c;
-  --dark-icon-primary: #a9afaf;
-  color: var(--dark-bg-secondary);
-  background-color: var(--dark-bg-primary);
+  color: var(--bg-secondary);
+  background-color: var(--bg-primary);
+  transition: background 250ms ease-in-out, color 500ms ease-in-out;
 }
 
 :root::-webkit-scrollbar {
@@ -25,15 +51,13 @@
 }
 
 :root::-webkit-scrollbar-track {
-  background: var(--dark-bg-trinary);
+  background: var(--bg-trinary);
 }
 
 :root::-webkit-scrollbar-thumb {
-  background: var(--dark-bg-primary);
+  background: var(--bg-primary);
 }
 
-body {
-  margin-top: 0;
-  margin: 0;
-  padding: 0;
+.App {
+  transition: background 250ms ease-in-out, color 500ms ease-in-out;
 }

@@ -1,12 +1,14 @@
 h1 {
-  color: var(--dark-text-primary);
+  color: var(--text-primary);
 }
 
 p {
-  color: var(--dark-text-secondary);
+  color: var(--text-secondary);
 }
 
 main {
   margin-left: 4rem;
   padding: 1rem;
+  color: var(--bg-primary);
+  height: 100vh;
 }
