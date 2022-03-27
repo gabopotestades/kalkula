@@ -56,7 +56,7 @@ function Navbar () {
             <ul className="navbar-nav" onMouseEnter={() => {setThemeText(currentTheme)}} onMouseLeave={() => {setThemeText('')}}>
 
                 <li className="nav-item">
-                    <Link className="nav-link" to="/finite-state-machines">
+                    <Link className="nav-link" to="/finite-state-acceptors">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-polygon" width={24} height={24} viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <circle cx={12} cy={5} r={2}></circle>
@@ -68,7 +68,7 @@ function Navbar () {
                             <path d="M18.5 10l-2.5 7"></path>
                             <path d="M13.5 17.5l-7 -5"></path>
                         </svg>
-                        <span className="link-text logo-text">Finite State Machines</span>
+                        <span className="link-text logo-text">Finite State Acceptors</span>
                     </Link>       
                 </li>
 
