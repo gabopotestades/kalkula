@@ -9,6 +9,8 @@
   --bg-dark-secondary: #242526;
   --bg-dark-trinary: #3a3b3c;
   --icon-dark-primary: #a9afaf;
+  --state-draggable-dark-primary: #6b6b6b;
+  --state-draggable-dark-text-primary: #c5c5c5;
 
   --text-light-primary: #927739;
   --text-light-secondary: #686560;
@@ -16,6 +18,8 @@
   --bg-light-secondary: #bdbdbd;
   --bg-light-trinary: #868686;
   --icon-light-primary: #646464;
+  --state-draggable-light-primary: #d8d8d8;
+  --state-draggable-light-text-primary: #464646;
 }
 
 .light-theme {
@@ -26,6 +30,8 @@
   --bg-trinary: var(--bg-light-trinary);
   --icon-primary: var(--icon-light-primary);
   --shadow-primary: var(--bg-dark-secondary);
+  --state-draggable-primary: var(--state-draggable-light-primary);
+  --state-draggable-text-primary: var(--state-draggable-light-text-primary);
 }
 
 .dark-theme {
@@ -36,6 +42,8 @@
   --bg-trinary: var(--bg-dark-trinary);
   --icon-primary: var(--icon-dark-primary);
   --shadow-primary: var(--bg-light-secondary);
+  --state-draggable-primary: var(--state-draggable-dark-primary);
+  --state-draggable-text-primary: var(--state-draggable-dark-text-primary);
 }
 
 :root {
