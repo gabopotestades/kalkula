@@ -1,7 +1,9 @@
 function FiniteStateAcceptors() {
   return (
+    <div>
 
-   <div></div>
+
+    </div>
   );
 }
 

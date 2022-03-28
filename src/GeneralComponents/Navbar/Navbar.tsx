@@ -3,11 +3,11 @@ import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import { Switch, FormControlLabel, createTheme, ThemeProvider} from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
-import { THEME_DARK_CAPTION, THEME_LIGHT_CAPTION } from '../../Constants/settingsConstants';
+import { settingsConstants } from '../../Constants/settingsConstants';
 
 function Navbar () {
 
-    const [currentTheme, setTheme] = useState<string>(THEME_DARK_CAPTION);
+    const [currentTheme, setTheme] = useState<string>(settingsConstants.THEME_DARK_CAPTION);
     const [themeText, setThemeText] = useState<string>('');
 
     const themeSettings = createTheme({
@@ -23,7 +23,7 @@ function Navbar () {
          
         const cachedTheme = localStorage.getItem('kalkula-theme');
 
-        if (cachedTheme && cachedTheme === THEME_LIGHT_CAPTION) {
+        if (cachedTheme && cachedTheme === settingsConstants.THEME_LIGHT_CAPTION) {
             changeTheme(false);
             
         } 
@@ -32,21 +32,23 @@ function Navbar () {
 
     useEffect(() => {
          
-        if (currentTheme === THEME_DARK_CAPTION) {
+        if (currentTheme === settingsConstants.THEME_DARK_CAPTION) {
             document.body.classList.replace('light-theme', 'dark-theme');
-            localStorage.setItem('kalkula-theme', THEME_DARK_CAPTION)
+            localStorage.setItem('kalkula-theme', settingsConstants.THEME_DARK_CAPTION)
         } else {
             document.body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('kalkula-theme', THEME_LIGHT_CAPTION)
+            localStorage.setItem('kalkula-theme', settingsConstants.THEME_LIGHT_CAPTION)
         }
 
     }, [currentTheme])
 
     function changeTheme(isClicked:boolean) {
-        setTheme(currentTheme === THEME_DARK_CAPTION ? THEME_LIGHT_CAPTION : THEME_DARK_CAPTION);
+        setTheme(currentTheme === settingsConstants.THEME_DARK_CAPTION ? settingsConstants.THEME_LIGHT_CAPTION : 
+            settingsConstants.THEME_DARK_CAPTION);
 
         if (isClicked) // Change label only if clicked in UI 
-            setThemeText(currentTheme === THEME_DARK_CAPTION ? THEME_LIGHT_CAPTION : THEME_DARK_CAPTION);  
+            setThemeText(currentTheme === settingsConstants.THEME_DARK_CAPTION ? settingsConstants.THEME_LIGHT_CAPTION : 
+                settingsConstants.THEME_DARK_CAPTION);  
         
     }
 
@@ -120,7 +122,7 @@ function Navbar () {
                         <ThemeProvider theme={themeSettings}>
                             <FormControlLabel className="nav-frm-control-label" label={themeText} 
                               control={<Switch  className="nav-switch" color="default" 
-                                        checked={currentTheme === THEME_LIGHT_CAPTION} onChange={() => {changeTheme(true)}}/>}/>
+                                        checked={currentTheme === settingsConstants.THEME_LIGHT_CAPTION} onChange={() => {changeTheme(true)}}/>}/>
                         </ThemeProvider>
                     </div>
                 </li>
