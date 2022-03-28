@@ -1,4 +1,4 @@
-import './Home.scss'
+import '../../Styles/DefaultStyle.scss'
 
 function Home() {
   return (

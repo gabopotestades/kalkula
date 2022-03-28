@@ -6,10 +6,13 @@
   height: 100vh;
   transition: width 200ms ease, background 250ms ease-in-out,
     color 500ms ease-in-out;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .navbar:hover {
   width: 16rem;
+  box-shadow: 0 0rem 0.5rem 0 var(--shadow-primary);
 }
 
 .navbar:hover .link-text {

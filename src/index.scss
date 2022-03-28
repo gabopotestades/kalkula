@@ -25,6 +25,7 @@
   --bg-secondary: var(--bg-light-secondary);
   --bg-trinary: var(--bg-light-trinary);
   --icon-primary: var(--icon-light-primary);
+  --shadow-primary: var(--bg-dark-secondary);
 }
 
 .dark-theme {
@@ -34,6 +35,7 @@
   --bg-secondary: var(--bg-dark-secondary);
   --bg-trinary: var(--bg-dark-trinary);
   --icon-primary: var(--icon-dark-primary);
+  --shadow-primary: var(--bg-light-secondary);
 }
 
 :root {
