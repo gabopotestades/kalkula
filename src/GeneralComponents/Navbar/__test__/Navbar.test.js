@@ -6,12 +6,6 @@ import App from "../../../App";
 
 afterEach(cleanup);
 
-it("renders navbar", () => {
-    const div = document.createElement("div");
-    const root = ReactDOMClient.createRoot(div);
-    root.render(<Navbar></Navbar>);
-});
-
 it("renders navbar correctly", () => {
     const { getByTestId } = render(<App></App>);
     const navbar = getByTestId("dti-navbar");
