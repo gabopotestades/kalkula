@@ -53,9 +53,9 @@ function Navbar () {
     }
 
     return (
-        <div className="navbar">
+        <div data-testid="dti-navbar" className="navbar">
 
-            <ul className="navbar-nav" onMouseEnter={() => {setThemeText(currentTheme)}} onMouseLeave={() => {setThemeText('')}}>
+            <ul data-testid="dti-navbar-nav" className="navbar-nav" onMouseEnter={() => {setThemeText(currentTheme)}} onMouseLeave={() => {setThemeText('')}}>
 
                 <li className="nav-item">
                     <Link className="nav-link" to="/finite-state-acceptors">

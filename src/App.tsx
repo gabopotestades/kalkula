@@ -11,7 +11,7 @@ function App() {
 
     <Router>
 
-      <div className="App">
+      <div data-test-id= "dti-app" className="App">
             
           <Navbar/>
           <Routes>
